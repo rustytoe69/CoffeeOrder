@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding= "10dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="253dp"
+        android:layout_height="125dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dunkin_donuts_logo" />
+
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FB8044"
+        android:inputType="text"
+        android:hint="@string/name"
+        android:textColor="#ABABAB"
+        android:textColorLink="#FDE3D8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/baloo"
+        android:text="@string/quantity"
+        android:textColor="#757575"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/name_input"
+        app:layout_constraintTop_toBottomOf="@+id/name_input" />
+
+    <Button
+        android:id="@+id/decrease_quantity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/baloo"
+        android:text="@string/decrease_quantity"
+        android:textColor="#878585"
+        android:textSize="25sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/quantity"
+        app:layout_constraintStart_toStartOf="@+id/size_buttons" />
+
+    <TextView
+        android:id="@+id/quantity_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:text="@string/quantity_num"
+        android:textColor="#020202"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/decrease_quantity_button"
+        app:layout_constraintEnd_toStartOf="@+id/increase_quantity_button"
+        app:layout_constraintStart_toEndOf="@+id/decrease_quantity_button"
+        app:layout_constraintTop_toTopOf="@+id/decrease_quantity_button" />
+
+    <Button
+        android:id="@+id/increase_quantity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/baloo"
+        android:text="@string/increase_quantity"
+        android:textColor="#878585"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/quantity_num"
+        app:layout_constraintEnd_toEndOf="@+id/size_buttons"
+        app:layout_constraintStart_toEndOf="@+id/quantity_num"
+        app:layout_constraintTop_toTopOf="@+id/quantity_num" />" />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/baloo"
+        android:text="@string/size"
+        android:textColor="#757575"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/quantity"
+        app:layout_constraintTop_toBottomOf="@+id/quantity" />
+
+    <RadioGroup
+        android:id="@+id/size_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/size">
+
+        <RadioButton
+            android:id="@+id/small_size_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/baloo"
+            android:text="@string/small_size"
+            android:textColor="#020202"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/medium_size_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/baloo"
+            android:text="@string/medium_size"
+            android:textColor="#020202"
+            android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <RadioButton
+            android:id="@+id/large_size_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/baloo"
+            android:text="@string/large_size"
+            android:textColor="#020202"
+            android:textSize="25sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/toppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/baloo"
+        android:text="@string/toppings"
+        android:textColor="#757575"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/quantity"
+        app:layout_constraintTop_toBottomOf="@+id/size" />
+
+    <CheckBox
+        android:id="@+id/whipped_cream_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/amiko"
+        android:text="@string/whipped_cream"
+        android:textColor="#020202"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toppings" />
+
+    <CheckBox
+        android:id="@+id/chocolate_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amiko"
+        android:text="@string/chocolate"
+        android:textColor="#020202"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/whipped_cream_box" />
+
+    <Button
+        android:id="@+id/order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#C53662"
+        android:fontFamily="@font/baloo"
+        android:text="@string/order_button"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chocolate_box" />
+
+    <TextView
+        android:id="@+id/order_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/baloo"
+        android:text="@string/order_summary"
+        android:textColor="#757575"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/quantity"
+        app:layout_constraintTop_toBottomOf="@+id/order_button" />
+
+    <TextView
+        android:id="@+id/order_summary_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/amiko"
+        android:text="@string/order_summary_text"
+        android:textColor="#020202"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_summary" />
+</androidx.constraintlayout.widget.ConstraintLayout>

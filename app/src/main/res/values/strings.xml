@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Just Java</string>
+    <string name="name">Name</string>
+    <string name="quantity">QUANTITY</string>
+    <string name="decrease_quantity">-</string>
+    <string name="quantity_num">1</string>
+    <string name="increase_quantity">+</string>
+
+
+    <string name="size">SIZE</string>
+    <string name="small_size">S</string>
+    <string name="medium_size">M</string>
+    <string name="large_size">L</string>
+
+    <string name="toppings">TOPPINGS</string>
+    <string name="whipped_cream">Whipped Cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="order_button">ORDER</string>
+    <string name="order_summary">ORDER SUMMARY</string>
+    <string name="order_summary_text"></string>
+
+
+    <string name="more_less_toast">Your order must be between 1 and 10 cups</string>
+    <string name="no_name_toast">You must include a name for your order</string>
+
+
+</resources>
